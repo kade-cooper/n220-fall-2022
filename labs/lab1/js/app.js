@@ -1,3 +1,4 @@
+//Kade Cooper 8/31/2022
 function setup(){
     createCanvas(800,400);
     background(0,222,155);

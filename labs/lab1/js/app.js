@@ -4,12 +4,15 @@ function setup(){
     fill("orange");
     triangle(100,150,0,100,100,50);
     for(var i=0; i <= 20;i++){
+        //makes sure every other circle is orange
         if(i%2==0){
             fill("orange");
         }
+        //makes sure all the other circles are blue
         else{
             fill("blue");
         }
+        //draws a circle at different spots depending on the value of i
         circle(100+i*30,100, 50);
     }
     for(var i=0; i <= 3;i++){

@@ -12,9 +12,9 @@ function draw(){
     line(mouseX-800,mouseY,mouseX+800,mouseY)
     line(mouseX,mouseY-800,mouseX,mouseY+800)
     timer=millis();
-    if(timer%2000<=20){
-    randX = random(0,700);
-    randY = random(0,700);
+    if(timer%2000<=15){
+    randX = random(20,700);
+    randY = random(20,700);
     fill("white");
     }
     console.log(timer);

@@ -5,6 +5,7 @@ createCanvas(400,400)
 var diameter=1;
 function draw(){
     diameter+=1;
+    //resets circle when it gets to 200 diameter
     if(diameter==200){
         diameter=1;
     }

@@ -12,7 +12,7 @@ function polarPoint(r){
 
 
 function draw(){
-    let res= polarPoint();
+    let res= polarPoint(30);
     translate(100,100);
     circle(res.x,res.y,10);
 }

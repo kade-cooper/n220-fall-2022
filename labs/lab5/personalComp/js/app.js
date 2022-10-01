@@ -4,18 +4,18 @@ dvBox.style.width = "100px";
 dvBox.style.height = "100px";
 dvBox.style.backgroundColor = '#0000FF';
 height=100;
-boocount=1;
 boostring='BOO! ';
 function cchange1(){
-    for(i=0;i<boocount;i++){
-        boostring+='BOO! ';
-    }
     dvBox.innerHTML = boostring;
-dvBox.style.backgroundColor="#FFFFFF";
-height+=10;
-dvBox.style.height=height+'px';
+    //adds another boo to boostring 
+    boostring+='BOO! ';
+    dvBox.style.backgroundColor="#FFFFFF";
+    //increases height of div
+    height+=10;
+    dvBox.style.height=height+'px';
 }
 function cchange2(){
+    //changes color back to blue and resets text to nothing
     dvBox.style.backgroundColor="#0000FF";
     dvBox.innerHTML = "";
 }

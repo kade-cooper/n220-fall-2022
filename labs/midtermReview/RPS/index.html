@@ -6,9 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin: 15px;
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
+    <div class="box1" id="topDiv"></div>
+    <div class="box1" id="div1" onClick="rock(); anyClicked()">rock</div>
+    <div class="box1" id="div2" onClick="paper(); anyClicked()">paper</div>
+    <div class="box1" id="div3" onClick="scissors(); anyClicked()">scissors</div>
+    <div class="box1" id="div3" onClick="guard(); anyClicked()">guard</div>
      <script src="js/app.js"></script>
 </body>
 </html>

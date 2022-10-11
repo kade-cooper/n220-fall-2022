@@ -10,12 +10,14 @@ let animals = ["dog","cat","trutle","flamingo","shark","dolphin"];
 let display = "";
 let green = 0;
 function anyClicked(){
+    //makes all backgrounds white
     dvBox1.style.backgroundColor="white";
     dvBox2.style.backgroundColor="white";
     dvBox3.style.backgroundColor="white";
     dvBox4.style.backgroundColor="white";
     dvBox5.style.backgroundColor="white";
     dvBox6.style.backgroundColor="white";
+    //sets one background to green
     if(green==1){
         dvBox1.style.backgroundColor="green";
     }
@@ -34,6 +36,7 @@ function anyClicked(){
     else{
         dvBox6.style.backgroundColor="green";
     }
+    //sets the text of them all to the array values
     dvBox1.innerHTML = animals[0];
     dvBox2.innerHTML = animals[1];
     dvBox3.innerHTML = animals[2];
@@ -41,11 +44,14 @@ function anyClicked(){
     dvBox5.innerHTML = animals[4];
     dvBox6.innerHTML = animals[5];
     dvTop.innerHTML = display;
+    //resets array
     animals = ["dog","cat","trutle","flamingo","shark","dolphin"];
 }
 function clicked1(){
+    //sets the array value to bolded version of text
     animals[0]="<strong> dog"
     display="dog";
+    //sets green to one to indicate the first div is green now
     green =1;
 }
 function clicked2(){

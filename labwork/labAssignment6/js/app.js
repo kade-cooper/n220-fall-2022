@@ -8,9 +8,7 @@ function checkVowel(character){
     || str=="y"){
         return true;
     }
-    else{
         return false;
-    }
 }
 
 

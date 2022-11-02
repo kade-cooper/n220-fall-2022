@@ -10,13 +10,13 @@ score = 0;
 function anyClicked(){
     //0 = rock 1 = paper 2 = scissors
     if(computer>=2){
-        dvTop.innerHTML = "score: " + score +"    You Chose " + choice + " Computer Chose Scissors";
+        dvTop.innerHTML = "score: " + score +"        You Chose " + choice + " Computer Chose Scissors";
     }
     else if(computer<2 && computer>=1){
-        dvTop.innerHTML = "score: " + score +"    You Chose " + choice + " Computer Chose Paper";
+        dvTop.innerHTML = "score: " + score +"        You Chose " + choice + " Computer Chose Paper";
     }
     else{
-        dvTop.innerHTML = "score: " + score +"    You Chose " + choice + " Computer Chose Rock";
+        dvTop.innerHTML = "score: " + score +"        You Chose " + choice + " Computer Chose Rock";
     }
 }
 function rock(){

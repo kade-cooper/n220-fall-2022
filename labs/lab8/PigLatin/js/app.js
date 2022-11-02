@@ -2,20 +2,25 @@
 let inp=document.getElementById("input");
 let out=document.getElementById("output");
 
-function divisibleBy7(num){
-if(num%7==0){
-    return true;
-}
-else{
-    return false;
-}
+function convertToPig(str){
+    let newStr = "";
+    for(var i=0; i<str.length; i++){
+        //checks for first vowel in word
+        if(str[i]=="a" || str[i]=="e" || str[i]=="i" || str[i]=="o" || str[i]=="u"
+        || str[i]=="y"){
+            for(var v=i; v<str.length;v++){
+                newStr+=str[v];
+            }
+            for(var b=0; b<i;b++){
+                newStr+=str[b];
+            }
+            newStr+="ay";
+            break;
+        }
+    }
+return newStr;
 }
 
 function clicked(){
-    if(divisibleBy7(inp.value)==true){
-        out.innerHTML="Number is divisible by 7";
-    }
-    else{
-        out.innerHTML="Number is not divisible by 7";
-    }
+    out.innerHTML = convertToPig(inp.value);
 }

@@ -2,8 +2,9 @@
 let inp=document.getElementById("input");
 let out=document.getElementById("output");
 
-function convertToPig(str){
+function convertToPig(strg){
     let newStr = "";
+    let str=strg.toLowerCase()
     for(var i=0; i<str.length; i++){
         //checks for first vowel in word
         if(str[i]=="a" || str[i]=="e" || str[i]=="i" || str[i]=="o" || str[i]=="u"

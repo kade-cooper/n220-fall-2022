@@ -5,57 +5,73 @@ let display = document.getElementById("display");
 
 function start(){
     let arr=[];
+    let dispArr=[];
     let roundMax=3;
     //first for loop makes array upon start button being pressed
     for(let i =0;i<8;i++){
         let rand=Math.floor(Math.random()*4);
         if(rand==0){
             arr[i]="ArrowRight";
+            dispArr[i]="→"
         }
         else if(rand==1){
             arr[i]="ArrowLeft";
+            dispArr[i]="←"
         }
         else if(rand==2){
             arr[i]="ArrowDown";
+            dispArr[i]="↓"
         }
         else{
             arr[i]="ArrowUp";
+            dispArr[i]="↑"
         }
     }
     //loops through array roundMax times
             let curIndex=0;
-            setTimeout(displayPrompt,3000)
+            setTimeout(displayPrompt,1000)
             function displayPrompt(){
-                display.innerHTML=arr[curIndex];
+                if(curIndex%2==0){
+                    display.innerHTML=dispArr[curIndex/2];
+                }
+                else{
+                    display.innerHTML="next";
+                }
                 curIndex++;
-                if(curIndex<roundMax+1){
-                    setTimeout(displayPrompt,1000);
+                if(curIndex<roundMax*2){
+                    setTimeout(displayPrompt,500);
                 } 
                 else{
-                    display.innerHTML="waiting for input";
+                    display.innerHTML="waiting for input (press any key when done)";
                 }
             }
             let response=[];
             //detects key presses
             document.onkeydown=function(event){
-                console.log(response);
                 if(response.length<roundMax){
                         response.push(event.key);
                 }
                 else{
                     for(let h=0;h<roundMax;h++){
+                        //checks that user input array (response) is equal to the portion of the main array
                         if(response[h]!=arr[h]){
+                            display.innerHTML="failed";
                             return;
+                        }
+                        else if(roundMax==arr.length){
+                            display.innerHTML="You Win";
+                            return;
+                        }
+                        else{
+                            display.innerHTML="Success";
                         }
                     }
                     response=[];
                     roundMax++;
                     curIndex=0;
-                    setTimeout(displayPrompt,3000)
+                    setTimeout(displayPrompt,1000)
                 }
-                console.log(response);
             }
-            //checks that user input array (response) is equal to the portion of the main array
-            console.log("break");
+            console.log("next attempt");
     console.log(arr);
     }

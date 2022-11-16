@@ -7,5 +7,6 @@ element2.addEventListener("click",clicked);
 element3.addEventListener("click",clicked);
 
 function clicked(event){
+    //sets background color of each div to the background color associated with that div's attribute
     event.target.style.backgroundColor = event.target.getAttribute("data-color");
 }

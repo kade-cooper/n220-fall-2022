@@ -2,6 +2,7 @@
 let box = document.getElementById("box");
 let buttons = document.getElementsByClassName("button");
 let message = document.getElementById("message");
+//addes on click to each button
 for(let i = 0;i<buttons.length;i++){
     buttons[i].addEventListener("click",clicked);
 }
@@ -22,7 +23,9 @@ function clicked(event){
     else{
         blue+=Number(event.target.getAttribute("data-add"));
     }
+    //sets the text of the message div to the rgb value
     message.innerHTML="current rgb: "+red+","+green+","+blue;
+    //sets the color of the main div to the rgb value
     box.style.backgroundColor = "rgb("+red+","+green+","+blue+")";
 
 }

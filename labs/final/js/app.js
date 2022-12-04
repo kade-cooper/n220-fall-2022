@@ -29,7 +29,7 @@ function start(){
     }
     //loops through array roundMax times
             let curIndex=0;
-            setTimeout(displayPrompt,1000)
+            displayPrompt();
             function displayPrompt(){
                 if(curIndex%2==0){
                     display.innerHTML=dispArr[curIndex/2];
@@ -39,7 +39,7 @@ function start(){
                 }
                 curIndex++;
                 if(curIndex<roundMax*2){
-                    setTimeout(displayPrompt,500);
+                    setTimeout(displayPrompt,1000);
                 } 
                 else{
                     display.innerHTML="waiting for input (press any key when done)";
@@ -69,7 +69,7 @@ function start(){
                     response=[];
                     roundMax++;
                     curIndex=0;
-                    setTimeout(displayPrompt,1000)
+                    setTimeout(displayPrompt,1000);
                 }
             }
             console.log("next attempt");

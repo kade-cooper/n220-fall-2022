@@ -39,6 +39,7 @@ function start(){
                 }
                 curIndex++;
                 if(curIndex<roundMax*2){
+                    console.log(curIndex);
                     setTimeout(displayPrompt,1000);
                 } 
                 else{
@@ -68,6 +69,7 @@ function start(){
                     }
                     response=[];
                     roundMax++;
+                    console.log(roundMax);
                     curIndex=0;
                     setTimeout(displayPrompt,1000);
                 }

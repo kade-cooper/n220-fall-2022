@@ -1,6 +1,6 @@
 let display = document.getElementById("display");
 
-
+let timid = 0;
 
 
 function start(){
@@ -27,7 +27,7 @@ function start(){
             dispArr[i]="↑"
         }
     }
-    //loops through array roundMax times
+    //loops through array roundMax*2 times
             let curIndex=0;
             displayPrompt();
             function displayPrompt(){
@@ -40,6 +40,10 @@ function start(){
                 curIndex++;
                 if(curIndex<roundMax*2){
                     console.log(curIndex);
+
+                    //turn off old timeout
+
+
                     setTimeout(displayPrompt,1000);
                 } 
                 else{

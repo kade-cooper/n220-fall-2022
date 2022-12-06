@@ -1,6 +1,6 @@
 let display = document.getElementById("display");
 
-let timid = 0;
+let timeid = 0;
 
 
 function start(){
@@ -42,9 +42,12 @@ function start(){
                     console.log(curIndex);
 
                     //turn off old timeout
+                    if(timeid!=0){
+                    clearTimeout(timeid);
+                    }
 
-
-                    setTimeout(displayPrompt,1000);
+                    timeid = setTimeout(displayPrompt,1000);
+                    
                 } 
                 else{
                     display.innerHTML="waiting for input (press any key when done)";
@@ -75,6 +78,9 @@ function start(){
                     roundMax++;
                     console.log(roundMax);
                     curIndex=0;
+                    if(timeid!=0){
+                        clearTimeout(timeid);
+                        }
                     setTimeout(displayPrompt,1000);
                 }
             }
